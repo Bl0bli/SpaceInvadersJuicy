@@ -328,7 +328,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 582271454}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: UpdateMovement
+        m_MethodName: UpdateInputMoves
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
