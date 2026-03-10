@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.showmielle.maths": {
+      "version": "https://github.com/Simon-Hubert/UnityMaths.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "d4f00278ab01e8b908610bd03f254245df93842d"
+    },
     "com.unity.2d.animation": {
       "version": "13.0.2",
       "depth": 0,
