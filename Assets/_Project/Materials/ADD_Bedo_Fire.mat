@@ -23,6 +23,22 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Alpha_Noise:
+        m_Texture: {fileID: 2800000, guid: ff863930ab4780c4fab388af3c451ae3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Alpha_Noise1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _B_Noise:
+        m_Texture: {fileID: 2800000, guid: ff863930ab4780c4fab388af3c451ae3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _F_Noise:
+        m_Texture: {fileID: 2800000, guid: ff863930ab4780c4fab388af3c451ae3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -61,6 +77,32 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AN_Max: 0.12
+    - _AN_Max1: 0.2
+    - _AN_Min: 0.01
+    - _AN_Min1: 0.12
+    - _AN_X_Pan: 0
+    - _AN_X_Tile: 2
+    - _AN_Y_Pan: 0
+    - _AN_Y_Tile: 2
+    - _B_Max: 0.01
+    - _B_Min: -0
+    - _B_Offset_Max: 2
+    - _B_Offset_Min: 1.5
+    - _B_X_Pan: 0
+    - _B_X_Tile: 3
+    - _B_Y_Pan: 0
+    - _B_Y_Tile: 2
+    - _F_Bot_Max: 0.81
+    - _F_Bot_Min: 0.08
+    - _F_Offset_Max: 2.27
+    - _F_Offset_Min: 1.1
+    - _F_Top_Max: 0.38
+    - _F_Top_Min: 0.14
+    - _F_X_Pan: 0.1
+    - _F_X_Tile: 1
+    - _F_Y_Pan: 0.09
+    - _F_Y_Tile: 3
     - _N1_Max: 0.33
     - _N1_Min: 0.07
     - _N1_X_Pan: 0.1
@@ -88,7 +130,10 @@ Material:
     - _N_X_Tile: 1
     - _N_Y_Pan: 0.1
     - _N_Y_Tile: 1
+    - _Offset_Max: 0.92
+    - _Offset_Min: 0.7
     m_Colors:
+    - _Burned_Color: {r: 0.21509436, g: 0.16319826, b: 0.12134566, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _F_Color: {r: 1, g: 0.55326, b: 0.23962256, a: 0}
