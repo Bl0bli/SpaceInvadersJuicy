@@ -15,26 +15,18 @@ namespace Leon
         readonly Vector3[] directions = { Vector3.left, Vector3.down, Vector3.right };
 
         [SerializeField] private int rows = 5;
-        [SerializeField] private int columns = 11;
+        [SerializeField] private int pillPerColumn = 5;
+        [SerializeField] private float rowSpacing = 1.0f;
 
-        [SerializeField] private Invader invaderPrefab = null;
+        [SerializeField] private PillFactory factory;
 
         // Initial bounds in which invaders are spawning.
         [SerializeField] private Vector2 bounds;
 
-        // Difficulty progress depending on enemy left ratio
-        [SerializeField] private AnimationCurve difficultyProgress = AnimationCurve.Linear(0, 0, 1, 1);
 
-        // Speed min and max depending on difficulty progress
-        [SerializeField] private float speedMin;
-        [SerializeField] private float speedMax;
+        [SerializeField] private float _speed;
 
-        // Random shoot rate min and max depending on difficulty progress
-        [SerializeField] private Vector2 shootRandomMin = new(3f, 5f);
-        [SerializeField] private Vector2 shootRandomMax = new(1f, 3f);
-
-        // A cozy time with no alien harm at start of the game. I guess Player shoot first.
-        [SerializeField] private float timeBeforeFirstShoot = 5f;
+        [SerializeField] private Vector2 _shootRandom = new(1f, 3f);
 
         // Distance moved when moving downward
         [SerializeField] private float downStep = 1f;
@@ -47,6 +39,8 @@ namespace Leon
         float distance = 0f;
 
         float shootCooldown;
+
+        private float downAccu = 0f;
 
         struct Column
         {
@@ -65,21 +59,22 @@ namespace Leon
         List<Row> invaderPerRow = new(); // Keeps track of invaders per row. A row will be removed if empty.
 
         void Awake() {
-            shootCooldown = timeBeforeFirstShoot;
-
-            for (int i = 0; i < columns; i++) {
-                invaderPerColumn.Add(new() { id = i, invaders = new() });
-            }
 
             for (int i = 0; i < rows; i++) {
                 invaderPerRow.Add(new() { id = i, invaders = new() });
             }
+            
+            for (int i = 0; i < pillPerColumn; i++) {
+                invaderPerColumn.Add(new() { id = i, invaders = new() });
+            }
 
             // Spaw the invader grid
-            for (int i = 0; i < columns; i++) {
+            for (int i = 0; i < pillPerColumn; i++) {
                 for (int j = 0; j < rows; j++) {
-                    Invader invader = GameObject.Instantiate<Invader>(
-                        invaderPrefab, GetPosition(i, j), Quaternion.identity, transform);
+                    Pill pill = factory.GetNewPill();
+                    Invader invader = pill.GetComponent<Invader>();
+                    invader.transform.localPosition = GetPosition(i, j);
+                    invader.transform.SetParent(transform, false);
                     invader.Initialize(new Vector2Int(i, j));
                     invader.onDestroy += RemoveInvader;
                     invaders.Add(invader);
@@ -87,7 +82,6 @@ namespace Leon
                     invaderPerRow[j].invaders.Add(invader);
                 }
             }
-
         }
 
         void Update() {
@@ -102,8 +96,7 @@ namespace Leon
             }
 
             // Shoot rate depends on remaining invaders ratio
-            float t = 1f - (invaders.Count - 1) / (float)((rows * columns) - 1);
-            Vector2 shootRandom = Vector2.Lerp(shootRandomMin, shootRandomMax, difficultyProgress.Evaluate(t));
+            Vector2 shootRandom = _shootRandom;
 
             // One column is selected to shoot a bullet. Only the invader at the bottom of that column can shoot.
             int columnIndex = Random.Range(0, invaderPerColumn.Count);
@@ -116,10 +109,7 @@ namespace Leon
             if (invaders.Count <= 0) {
                 return;
             }
-
-            // Speed depends on remaining invaders ratio
-            float t = 1f - (invaders.Count - 1) / (float)((rows * columns) - 1);
-            float speed = Mathf.Lerp(speedMin, speedMax, difficultyProgress.Evaluate(t));
+            float speed = _speed;
 
             Vector3 direction = directions[(int)move];
             float delta = speed * Time.deltaTime;
@@ -129,7 +119,7 @@ namespace Leon
                 case Move.Right:
                 {
                     // Get the last non-empty column position
-                    float right = GetColumnPosition(invaderPerColumn[^1].id);
+                    float right = transform.position.x + GetColumnPosition(invaderPerColumn[^1].id);
                     float nextRight = right + delta;
                     // Check if position will be out of game bound after beeing moved
                     if (!GameManager.Instance.IsInBounds(nextRight, GameManager.DIRECTION.Right)) {
@@ -143,7 +133,7 @@ namespace Leon
                 case Move.Left:
                 {
                     // Get the first non-empty column position
-                    float left = GetColumnPosition(invaderPerColumn[0].id);
+                    float left = transform.position.x + GetColumnPosition(invaderPerColumn[0].id);
                     float nextLeft = left + delta;
                     // Check if position will be out of game bound after beeing moved
                     if (!GameManager.Instance.IsInBounds(nextLeft, GameManager.DIRECTION.Left)) {
@@ -165,6 +155,11 @@ namespace Leon
                         // Adjust "delta" to place invaders exactly at end of downStep
                         delta -= (distance - downStep);
                         BeginNextMove();
+                        downAccu += downStep;
+                        if (downAccu > rowSpacing) {
+                            downAccu -= rowSpacing;
+                            AddNewRow();
+                        }
                     }
 
                     break;
@@ -228,17 +223,34 @@ namespace Leon
 
         // Get position of an invader in the bounding box according to it's column index
         float GetColumnPosition(int column) {
-            return Mathf.Lerp(Bounds.min.x, Bounds.max.x, column / (float)(columns - 1));
+            return Mathf.Lerp(-bounds.x/2.0f, bounds.x/2.0f, column / (float)(pillPerColumn - 1));
         }
 
         // Get position of an invader in the bounding box according to it's row index
         float GetRowPosition(int row) {
-            return Mathf.Lerp(Bounds.min.y, Bounds.max.y, row / (float)(rows - 1));
+            return row * rowSpacing;
         }
 
         public void OnDrawGizmos() {
             Gizmos.color = Color.red;
             Gizmos.DrawWireCube(transform.position, new Vector3(bounds.x, bounds.y, 0f));
+        }
+
+        public void AddNewRow() {
+            Debug.Log("New Row");
+            int index = invaderPerRow.Count;
+            invaderPerRow.Add(new() { id = index, invaders = new() });
+            for (int j = 0; j < pillPerColumn; j++) {
+                    Pill pill = factory.GetNewPill();
+                    Invader invader = pill.GetComponent<Invader>();
+                    invader.transform.localPosition = GetPosition(j, index);
+                    invader.transform.SetParent(transform, false);
+                    invader.Initialize(new Vector2Int(j, index));
+                    invader.onDestroy += RemoveInvader;
+                    invaders.Add(invader);
+                    invaderPerRow[index].invaders.Add(invader);
+                    invaderPerColumn[j].invaders.Add(invader);
+            }
         }
     }
 }
