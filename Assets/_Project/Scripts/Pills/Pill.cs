@@ -16,15 +16,15 @@ namespace Leon
         private void OnEnable() {
             if(!_owner) _owner = GetComponent<Invader>();
             Debug.Log($"Owner : {_owner}");
-            _owner.onDestroyed += OnOwnerDestroyed;
+            _owner.onDestroyed += OnOwnerEaten;
         }
 
         private void OnDisable() {
-            _owner.onDestroyed -= OnOwnerDestroyed;
+            _owner.onDestroyed -= OnOwnerEaten;
         }
         
         
-        private void OnOwnerDestroyed() {
+        private void OnOwnerEaten() {
             GameManager.Instance.GameState.CurrentCombo += 1;
             _effect.Activate(GameManager.Instance.GameState);
         }
