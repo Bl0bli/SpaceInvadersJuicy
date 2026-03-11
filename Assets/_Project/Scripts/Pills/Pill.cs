@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Leon
 {
@@ -8,14 +9,14 @@ namespace Leon
     {
         [Effect(EffectAttribute.Target.Effect)][SerializeReference] private IPillEffect _effect;
         private Invader _owner;
-
+        [SerializeField] private UnityEvent OnEaten;
+        
         private void Reset() {
             _owner = GetComponent<Invader>();
         }
 
         private void OnEnable() {
             if(!_owner) _owner = GetComponent<Invader>();
-            Debug.Log($"Owner : {_owner}");
             _owner.onDestroyed += OnOwnerEaten;
         }
 
@@ -23,8 +24,8 @@ namespace Leon
             _owner.onDestroyed -= OnOwnerEaten;
         }
         
-        
         private void OnOwnerEaten() {
+            OnEaten?.Invoke();
             GameManager.Instance.GameState.CurrentCombo += 1;
             _effect.Activate(GameManager.Instance.GameState);
         }

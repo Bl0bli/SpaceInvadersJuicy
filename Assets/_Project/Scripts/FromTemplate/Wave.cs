@@ -195,12 +195,12 @@ namespace Leon
             if (indexColumn != -1) {
                 Column column = invaderPerColumn[indexColumn];
                 column.invaders.Remove(invader);
-                if (column.invaders.Count <= 0) {
-                    invaderPerColumn.RemoveAt(indexColumn);
-                }
-                else {
-                    invaderPerColumn[indexColumn] = column;
-                }
+                // if (column.invaders.Count <= 0) {
+                //     invaderPerColumn.RemoveAt(indexColumn);
+                // }
+                // else {
+                //     invaderPerColumn[indexColumn] = column;
+                // }
             }
 
             int indexRow = invaderPerRow.FindIndex(x => x.id == invader.GridIndex.y);

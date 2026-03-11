@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace Leon
@@ -24,6 +25,9 @@ namespace Leon
         [SerializeField] private float _tongueMAXDist;
         [SerializeField] private float _tongueFreezingTime;
         [SerializeField] private AnimationCurve _stretchTongueCurve;
+
+        [SerializeField] private UnityEvent OnTongueStretch; 
+        [SerializeField] private UnityEvent OnTongueUnStretch; 
 
         private float lastShootTimestamp = Mathf.NegativeInfinity;
         private float _moves = 0;
@@ -81,6 +85,7 @@ namespace Leon
         IEnumerator StretchTongue()
         {
             float t = 0;
+            OnTongueStretch?.Invoke();
             while (t < _animTime)
             {
                 t += Time.deltaTime;
@@ -97,13 +102,14 @@ namespace Leon
         IEnumerator UnStretchTongue()
         {
             yield return new WaitForSeconds(_tongueFreezingTime);
-            float t = 1;
+            OnTongueUnStretch?.Invoke();
+            float t = 0;
             while (t < _animTime)
             {
                 t += Time.deltaTime;
-                float p = _stretchTongueCurve.Evaluate(t);
+                float p = _stretchTongueCurve.Evaluate(1-(t/_animTime));
                 _tongueTransform.position = new Vector3(_tongueTransform.position.x,
-                    Mathf.Lerp(_startY + _tongueMAXDist, _startY, p), _tongueTransform.position.z);
+                    Mathf.Lerp(_startY,_startY + _tongueMAXDist, p), _tongueTransform.position.z);
                 yield return new WaitForEndOfFrame();
             }
             _tongueTransform.position = new Vector3(_tongueTransform.position.x, _startY, _tongueTransform.position.z);
