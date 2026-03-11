@@ -1,18 +1,22 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace Leon
 {
     public class GameState : MonoBehaviour
     {
-        [SerializeField] private UIScore scoreUI;
         private float totalScore = 0;
         private float currentMultiplier = 0;
         private float currentBaseScore = 0;
         private float currentCombo = 0;
 
         public static event Action onComboReset;
+        [SerializeField] private UnityEvent<float> onCurrentComboChange;
+        [SerializeField] private UnityEvent<float> onCurrentMultiplierChange;
+        [SerializeField] private UnityEvent<float> onCurrentBaseScoreChange;
+        [SerializeField] private UnityEvent<float> onTotalScoreChange;
         
         public float CurrentCombo
         {
@@ -20,7 +24,7 @@ namespace Leon
             set
             {
                 currentCombo = value;
-                scoreUI.SetCombo(value);
+                onCurrentComboChange?.Invoke(value);
             }
         }
 
@@ -29,7 +33,7 @@ namespace Leon
             get => totalScore;
             set{
                 totalScore = value;
-                scoreUI.SetTotalScore(value);
+                onTotalScoreChange?.Invoke(value);
             }
         }
 
@@ -38,7 +42,7 @@ namespace Leon
             get => currentMultiplier;
             set{
                 currentMultiplier = value;
-                scoreUI.SetMultiplier(value);
+                onCurrentMultiplierChange?.Invoke(value);
             }
         }
         
@@ -47,7 +51,7 @@ namespace Leon
             get => currentBaseScore;
             set{
                 currentBaseScore = value;
-                scoreUI.SetBaseScore(value);
+                onCurrentBaseScoreChange?.Invoke(value);
             }
         }
 

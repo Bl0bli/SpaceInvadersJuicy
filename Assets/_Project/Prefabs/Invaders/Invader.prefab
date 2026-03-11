@@ -123,100 +123,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Leon::Leon.Pill
   _effect:
-    rid: 8124887587739664702
+    rid: 8124887587739664740
   references:
     version: 2
     RefIds:
-    - rid: 8124887587739664702
+    - rid: 8124887587739664740
       type: {class: ConditionalEffect, ns: Leon, asm: Leon}
       data:
         condition:
-          rid: 8124887587739664715
+          rid: 8124887587739664746
         onPass:
-          rid: 8124887587739664708
+          rid: 8124887587739664742
         onMiss:
-          rid: 8124887587739664719
+          rid: 8124887587739664743
         always:
-          rid: 8124887587739664706
-    - rid: 8124887587739664706
+          rid: 8124887587739664744
+    - rid: 8124887587739664742
       type: {class: NoEffect, ns: Leon, asm: Leon}
       data: 
-    - rid: 8124887587739664708
-      type: {class: AddBaseScore, ns: Leon, asm: Leon}
-      data:
-        value:
-          rid: 8124887587739664711
-    - rid: 8124887587739664711
-      type: {class: Mul, ns: Leon, asm: Leon}
-      data:
-        a:
-          rid: 8124887587739664714
-        b:
-          rid: 8124887587739664713
-    - rid: 8124887587739664713
-      type: {class: Number, ns: Leon, asm: Leon}
-      data:
-        value: 2
-    - rid: 8124887587739664714
-      type: {class: Combo, ns: Leon, asm: Leon}
+    - rid: 8124887587739664743
+      type: {class: NoEffect, ns: Leon, asm: Leon}
       data: 
-    - rid: 8124887587739664715
+    - rid: 8124887587739664744
+      type: {class: NoEffect, ns: Leon, asm: Leon}
+      data: 
+    - rid: 8124887587739664746
       type: {class: And, ns: Leon, asm: Leon}
       data:
         a:
-          rid: 8124887587739664718
+          rid: 8124887587739664747
         b:
-          rid: 8124887587739664717
-    - rid: 8124887587739664717
+          rid: 8124887587739664748
+    - rid: 8124887587739664747
       type: {class: Always, ns: Leon, asm: Leon}
       data: 
-    - rid: 8124887587739664718
-      type: {class: ComboLEqual, ns: Leon, asm: Leon}
-      data:
-        value: 5
-    - rid: 8124887587739664719
-      type: {class: ConditionalEffect, ns: Leon, asm: Leon}
-      data:
-        condition:
-          rid: 8124887587739664724
-        onPass:
-          rid: 8124887587739664721
-        onMiss:
-          rid: 8124887587739664725
-        always:
-          rid: 8124887587739664723
-    - rid: 8124887587739664721
-      type: {class: NoEffect, ns: Leon, asm: Leon}
-      data: 
-    - rid: 8124887587739664723
-      type: {class: NoEffect, ns: Leon, asm: Leon}
-      data: 
-    - rid: 8124887587739664724
-      type: {class: ComboLEqual, ns: Leon, asm: Leon}
-      data:
-        value: 10
-    - rid: 8124887587739664725
-      type: {class: ConditionalEffect, ns: Leon, asm: Leon}
-      data:
-        condition:
-          rid: 8124887587739664726
-        onPass:
-          rid: 8124887587739664727
-        onMiss:
-          rid: 8124887587739664728
-        always:
-          rid: 8124887587739664729
-    - rid: 8124887587739664726
+    - rid: 8124887587739664748
       type: {class: Always, ns: Leon, asm: Leon}
-      data: 
-    - rid: 8124887587739664727
-      type: {class: NoEffect, ns: Leon, asm: Leon}
-      data: 
-    - rid: 8124887587739664728
-      type: {class: NoEffect, ns: Leon, asm: Leon}
-      data: 
-    - rid: 8124887587739664729
-      type: {class: NoEffect, ns: Leon, asm: Leon}
       data: 
 --- !u!61 &1286698669282929100
 BoxCollider2D:

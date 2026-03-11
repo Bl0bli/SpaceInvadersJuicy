@@ -7,7 +7,6 @@ namespace Leon
     public class NoEffect : IPillEffect
     {
         public void Activate(GameState gameState) {
-            Debug.Log("Nothing Happend");
         }
     }
 }
