@@ -1110,7 +1110,7 @@ GameObject:
   - component: {fileID: 1131256922}
   - component: {fileID: 1131256921}
   m_Layer: 0
-  m_Name: test
+  m_Name: Global_Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
