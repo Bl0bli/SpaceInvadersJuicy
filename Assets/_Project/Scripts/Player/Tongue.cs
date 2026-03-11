@@ -9,7 +9,7 @@ namespace Leon
     public class Tongue : MonoBehaviour
     {
         [SerializeField] private Collider2D _colliderAlongTongue;
-        [SerializeField] private UnityEvent onInvaderCaught, OnSwallow;
+        [SerializeField] private UnityEvent onInvaderCaught, OnSwallow, OnFirstCatch;
 
         public event Action onHit;
         public List<Invader> Invaders => _invaders;
@@ -23,6 +23,7 @@ namespace Leon
             {
                 _hit = true;
                 onHit?.Invoke();
+                OnFirstCatch?.Invoke();
             }
             if (_colliderAlongTongue.enabled == false) _colliderAlongTongue.enabled = true;
             invader.transform.SetParent(transform);
