@@ -15,7 +15,6 @@ namespace Leon
 
         private void OnEnable() {
             if(!_owner) _owner = GetComponent<Invader>();
-            Debug.Log($"Owner : {_owner}");
             _owner.onDestroyed += OnOwnerDestroyed;
         }
 
