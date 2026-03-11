@@ -148,12 +148,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85b167445531034a844ed70dabed643, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Leon::Leon.GlobalSounds
-  BaseMusic: {fileID: 0}
-  GlobalScoreTresholds: 
-  music: []
-  fire: []
-  CurrentScoreTresholds: 32000000
-  sounds: []
+  BaseMusic: {fileID: 8300000, guid: 5ea50e99ba3b6624397a5f605931b517, type: 3}
+  GlobalScoreTresholds: 3200000064000000c8000000f4010000
+  music:
+  - {fileID: 8300000, guid: c364133a75ce3744f8c1c67c57905a94, type: 3}
+  - {fileID: 8300000, guid: f3d3b8087f832874b86c0a1575ef29fc, type: 3}
+  - {fileID: 8300000, guid: a236c9ff488e9a740bd6b7b6f4d3a377, type: 3}
+  - {fileID: 8300000, guid: 500d442036e095543930e43c1f8a450c, type: 3}
+  fire:
+  - {fileID: 8300000, guid: 67ec3b66f58b1bd45b07d2ef05e57003, type: 3}
+  - {fileID: 8300000, guid: 680cb9a70fd3de645a9f032788f6f67c, type: 3}
+  - {fileID: 8300000, guid: f178daed737ca9340862fc3254db5684, type: 3}
+  - {fileID: 0}
+  CurrentScoreTresholds: 3200000064000000c8000000
+  sounds:
+  - {fileID: 8300000, guid: 02653fc7de4ecec4a9d5e81f0aa49ece, type: 3}
+  - {fileID: 8300000, guid: 6e11e5dff1a08fc4fa9367f137e272f9, type: 3}
+  - {fileID: 8300000, guid: 882b5a6f4d568cd4aadb223ca0ba030a, type: 3}
 --- !u!4 &436789616
 Transform:
   m_ObjectHideFlags: 0
