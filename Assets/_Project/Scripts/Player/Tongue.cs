@@ -50,9 +50,11 @@ namespace Leon
             DisableCollider();
             foreach (Invader invader in _invaders)
             {
-                invader.TriggerDestroy();
                 OnSwallow?.Invoke();
+                CameraShake.Instance.Register();
+                invader.TriggerDestroy();
             }
+            CameraShake.Instance.ShakeAll();
             _invaders.Clear();
         }
     }
