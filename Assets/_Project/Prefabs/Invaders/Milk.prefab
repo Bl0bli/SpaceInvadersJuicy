@@ -91,5 +91,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7429291776354201643, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9106969911291648512}
   m_SourcePrefab: {fileID: 100100000, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+--- !u!1 &1182089809101944609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7429291776354201643, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+  m_PrefabInstance: {fileID: 8610185299222578954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9106969911291648512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182089809101944609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f710bc6b9712fb84786bde937bf17188, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Leon::Leon.Milk
