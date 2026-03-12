@@ -8,7 +8,7 @@ namespace Leon
 {
     public class Tongue : MonoBehaviour
     {
-        [SerializeField] private Collider2D _colliderAlongTongue;
+        [SerializeField] private Collider2D _colliderTopTongue,_colliderAlongTongue;
         [SerializeField] private UnityEvent onInvaderCaught, OnSwallow, OnFirstCatch;
 
         public event Action onHit;
@@ -16,7 +16,12 @@ namespace Leon
         
         [SerializeField]private List<Invader> _invaders = new List<Invader>();
         private bool _hit = false;
-        
+
+        private void Start()
+        {
+            DisableCollider();
+        }
+
         public void CatchInvader(Invader invader)
         {
             if (!_hit)
@@ -35,7 +40,10 @@ namespace Leon
         {
             _hit = false;
             _colliderAlongTongue.enabled = false;
+            _colliderTopTongue.enabled = false;
         }
+
+        public void EnableTopColliderTongue() => _colliderTopTongue.enabled = true;
 
         public void Swallow()
         {

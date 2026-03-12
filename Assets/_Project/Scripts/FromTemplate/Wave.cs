@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Leon
@@ -89,7 +90,9 @@ namespace Leon
             UpdateShoot();
         }
 
-        private void UpdateShoot() {
+        private void UpdateShoot()
+        {
+            Invader[] milks = invaders.Where(x => x.GetComponent<Milk>()).ToArray();
             shootCooldown -= Time.deltaTime;
             if (shootCooldown > 0) {
                 return;
@@ -99,8 +102,8 @@ namespace Leon
             Vector2 shootRandom = _shootRandom;
 
             // One column is selected to shoot a bullet. Only the invader at the bottom of that column can shoot.
-            int columnIndex = Random.Range(0, invaderPerColumn.Count);
-            invaderPerColumn[columnIndex].invaders[0].Shoot();
+            int milkIndex = Random.Range(0, milks.Length);
+            milks[milkIndex].Shoot();
 
             shootCooldown += Random.Range(shootRandom.x, shootRandom.y);
         }
