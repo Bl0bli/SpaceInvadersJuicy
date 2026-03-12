@@ -21,10 +21,10 @@ namespace Leon
 
         [SerializeField] private Tongue _tongue;
 
-        [SerializeField] private float _animTime;
+        [SerializeField] private float _animTimeStretch = 1, _animTimeUnStretch = 1;
         [SerializeField] private float _tongueMAXDist;
         [SerializeField] private float _tongueFreezingTime;
-        [SerializeField] private AnimationCurve _stretchTongueCurve;
+        [SerializeField] private AnimationCurve _stretchTongueCurve, _unStretchTongueCurve;
 
         [SerializeField] private UnityEvent OnTongueStretch; 
         [SerializeField] private UnityEvent OnTongueUnStretch; 
@@ -86,10 +86,10 @@ namespace Leon
         {
             float t = 0;
             OnTongueStretch?.Invoke();
-            while (t < _animTime)
+            while (t < _animTimeStretch)
             {
                 t += Time.deltaTime;
-                float p = _stretchTongueCurve.Evaluate(t / _animTime);
+                float p = _stretchTongueCurve.Evaluate(t / _animTimeStretch);
                 _tongueTransform.position = new Vector3(_tongueTransform.position.x,
                     Mathf.Lerp(_startY, _startY + _tongueMAXDist, p), _tongueTransform.position.z);
                 yield return new WaitForEndOfFrame();
@@ -104,10 +104,10 @@ namespace Leon
             yield return new WaitForSeconds(_tongueFreezingTime);
             OnTongueUnStretch?.Invoke();
             float t = 0;
-            while (t < _animTime)
+            while (t < _animTimeUnStretch)
             {
                 t += Time.deltaTime;
-                float p = _stretchTongueCurve.Evaluate(1-(t/_animTime));
+                float p = _unStretchTongueCurve.Evaluate(1-(t/_animTimeStretch));
                 _tongueTransform.position = new Vector3(_tongueTransform.position.x,
                     Mathf.Lerp(_startY,_startY + _tongueMAXDist, p), _tongueTransform.position.z);
                 yield return new WaitForEndOfFrame();
