@@ -98,6 +98,11 @@ namespace Leon
                 return;
             }
 
+            if (milks.Length <= 0) {
+                Debug.Log("Pas de Lait");
+                return;
+            }
+
             // Shoot rate depends on remaining invaders ratio
             Vector2 shootRandom = _shootRandom;
 
