@@ -59,7 +59,7 @@ Material:
     - _Lens_Min: -0.2
     - _Lens_MultipleOrSingle: 0
     - _Lens_Multiple_0_OrSingle_1: 1
-    - _Lens_Strengh: 6.25
+    - _Lens_Strengh: 0
     - _R_Offset: 0.05
     - _fwghf: 1
     m_Colors:

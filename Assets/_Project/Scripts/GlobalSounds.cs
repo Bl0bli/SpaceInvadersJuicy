@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Leon
 {
@@ -20,6 +21,8 @@ namespace Leon
         [SerializeField] private AudioSource _asFire;
         [SerializeField] private AudioSource _asSounds;
         [SerializeField] private GameState _gameState;
+
+        [SerializeField] private UnityEvent _onPhaseChange;
 
         private void OnEnable() {
             _gameState.onTotalScoreChangeEvent += OnTotalScoreChange;
@@ -55,6 +58,7 @@ namespace Leon
 
             if (_asMusic.generator != newClipMusic && newClipMusic) {
                 _asMusic.generator = newClipMusic;
+                _onPhaseChange?.Invoke();
                 _asMusic.Play();
             }
             

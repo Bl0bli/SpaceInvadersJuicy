@@ -23,7 +23,7 @@ namespace Leon
         [Header("ChromaticAberration"), SerializeField]
         private Material _chromaticAberrationMaterial;
         [SerializeField] private float _HDR = 1;
-        [SerializeField] private float _Strength = 1;
+        [SerializeField] private float _Strength = 0;
         [SerializeField] private Vector2 _RScale = new Vector2(1,1);
         [SerializeField] private Vector2 _ROffset = new Vector2(0.02f, - 0.02f);
         [SerializeField] private Vector2 _GScale = new Vector2(1,1);
@@ -31,7 +31,7 @@ namespace Leon
         [SerializeField] private Vector2 _BScale = new Vector2(1,1);
         [SerializeField] private Vector2 _BOffset = new Vector2(-0.02f, 0.02f);
         [SerializeField] private Vector2 _lensPos;
-        [SerializeField] private float _lensStrength = 1;
+        [SerializeField] private float _lensStrength = 0;
         [SerializeField] private float _lensMin = -0.2f;
         [SerializeField] private float _lensMax = 0.5f;
         [SerializeField] private float _Lens_MultipleOrSingle = 0;
