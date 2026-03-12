@@ -99,7 +99,7 @@ Material:
     - _B_X_Tile: 3
     - _B_Y_Pan: 0
     - _B_Y_Tile: 2
-    - _Bedo_Consumption: 0.7372422
+    - _Bedo_Consumption: 0
     - _Burnt_Offset: 0.22
     - _Burnt_Scale: 0.5
     - _Burnt_Width: 0.075

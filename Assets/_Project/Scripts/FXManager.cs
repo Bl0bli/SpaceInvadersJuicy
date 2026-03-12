@@ -19,6 +19,7 @@ namespace Leon
 
         public void ToggleDisableAll()
         {
+            Debug.Break();
             _disableAll = !_disableAll;
             OnDisableAllToggled?.Invoke(_disableAll);
             _animator.SetBool("disable", _disableAll);

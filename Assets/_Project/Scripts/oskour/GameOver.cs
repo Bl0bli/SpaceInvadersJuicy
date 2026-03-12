@@ -12,7 +12,9 @@ namespace Leon
 
         private void Start() {
             text = GetComponent<TMP_Text>();
-        }
+            
+            FXManager.Instance.ToggleDisableAll();
+            }
 
         private void Update() {
             text.color = Random.ColorHSV(0,1,1,1,1,1);
