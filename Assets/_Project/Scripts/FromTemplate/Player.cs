@@ -96,10 +96,10 @@ namespace Leon
             }
             _tongueTransform.position = new Vector3(_tongueTransform.position.x, _startY + _tongueMAXDist, _tongueTransform.position.z);
 
-            yield return StartCoroutine(UnStretchTongue());
+            yield return StartCoroutine(UnStretchTongue(_tongueTransform.position.y));
         }
 
-        IEnumerator UnStretchTongue()
+        IEnumerator UnStretchTongue(float startDist)
         {
             yield return new WaitForSeconds(_tongueFreezingTime);
             OnTongueUnStretch?.Invoke();
@@ -109,7 +109,7 @@ namespace Leon
                 t += Time.deltaTime;
                 float p = _unStretchTongueCurve.Evaluate(1-(t/_animTimeStretch));
                 _tongueTransform.position = new Vector3(_tongueTransform.position.x,
-                    Mathf.Lerp(_startY,_startY + _tongueMAXDist, p), _tongueTransform.position.z);
+                    Mathf.Lerp(_startY, startDist, p), _tongueTransform.position.z);
                 yield return new WaitForEndOfFrame();
             }
             _tongueTransform.position = new Vector3(_tongueTransform.position.x, _startY, _tongueTransform.position.z);
@@ -119,7 +119,7 @@ namespace Leon
         private void StopStretch()
         {
             StopCoroutine(_stretchRoutine);
-            StartCoroutine(UnStretchTongue());
+            StartCoroutine(UnStretchTongue(_tongueTransform.position.y));
         }
     }
 }
