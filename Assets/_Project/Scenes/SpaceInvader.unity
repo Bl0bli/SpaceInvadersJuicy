@@ -3275,6 +3275,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2766b60fb3be8384699b67a59cdc3569, type: 3}
+--- !u!1 &1371718156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3751227193795152075, guid: 2766b60fb3be8384699b67a59cdc3569, type: 3}
+  m_PrefabInstance: {fileID: 1371718155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1375873778 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 68804899782793192, guid: 4b645ada8b79adf499021fb2540867ca, type: 3}
@@ -4277,6 +4282,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
+      propertyPath: _bg
+      value: 
+      objectReference: {fileID: 1371718156}
     - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
       propertyPath: _HDR
       value: 1
