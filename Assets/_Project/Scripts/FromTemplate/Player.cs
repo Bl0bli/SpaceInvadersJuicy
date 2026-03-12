@@ -43,6 +43,7 @@ namespace Leon
 
         [SerializeField] private UnityEvent OnTongueStretch; 
         [SerializeField] private UnityEvent OnTongueUnStretch; 
+        [SerializeField] private UnityEvent OnTongueFinishedUnStretch; 
 
         private float lastShootTimestamp = Mathf.NegativeInfinity;
         private float _moves = 0;
@@ -161,6 +162,7 @@ namespace Leon
             _unStretchRoutine = null;
             _tongueTransform.position = new Vector3(_tongueTransform.position.x, _startY, _tongueTransform.position.z);
             _tongue.Swallow();
+            OnTongueFinishedUnStretch?.Invoke();
         }
 
         private void StopStretch()
