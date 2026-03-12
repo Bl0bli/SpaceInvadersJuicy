@@ -14,6 +14,16 @@ namespace Leon
     }
     
     [Serializable]
+    public class AddCombo : IPillEffect
+    {
+        [Effect(EffectAttribute.Target.Float)][SerializeReference] private IFloat value;
+        
+        public void Activate(GameState gameState) {
+            gameState.CurrentCombo += value.Evaluate(gameState);
+        }
+    }
+    
+    [Serializable]
     public class AddTotalScore : IPillEffect
     {
         [Effect(EffectAttribute.Target.Float)][SerializeReference] private IFloat value;
