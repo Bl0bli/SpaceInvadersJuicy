@@ -45,6 +45,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Half_or_not: 1
     - _Texture_Smoothstep: 0
     - _Tile_X: 1
     - _Tile_Y: 1
