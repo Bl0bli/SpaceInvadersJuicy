@@ -10,11 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1286698669282929100, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 4.99
+      value: 0.998
       objectReference: {fileID: 0}
     - target: {fileID: 1286698669282929100, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 9.34
+      value: 1.868
       objectReference: {fileID: 0}
     - target: {fileID: 1727431462037305599, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_Sprite
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[8124887587739664740].onPass
@@ -65,6 +65,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: -4945600227215179681}
@@ -73,11 +77,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
