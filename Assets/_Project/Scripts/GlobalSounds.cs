@@ -60,6 +60,7 @@ namespace Leon
 
             if (_asMusic.generator != newClipMusic && newClipMusic) {
                 _asMusic.generator = newClipMusic;
+                Debug.Log($"PhaseChanged : {index}");
                 _onPhaseChange?.Invoke(index);
                 _asMusic.Play();
             }
