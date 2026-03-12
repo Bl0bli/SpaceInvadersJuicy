@@ -263,6 +263,9 @@ MonoBehaviour:
   _asFire: {fileID: 436789619}
   _asSounds: {fileID: 436789618}
   _gameState: {fileID: 879569045}
+  _onPhaseChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &436789616
 Transform:
   m_ObjectHideFlags: 0
@@ -1285,6 +1288,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1398775945572801657, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b05cb7cf3140854ab609cb26cf91fe5, type: 2}
     - target: {fileID: 3036092329077277066, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
       propertyPath: m_Name
       value: Player
