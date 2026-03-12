@@ -77,6 +77,7 @@ namespace Leon
             //Instantiate(bulletPrefab, shootAt.position, Quaternion.identity);
             lastShootTimestamp = Time.time;
             _stretchRoutine = StartCoroutine(StretchTongue());
+            _tongue.EnableTopColliderTongue();
         }
 
         public void OnTriggerEnter2D(Collider2D collision)
