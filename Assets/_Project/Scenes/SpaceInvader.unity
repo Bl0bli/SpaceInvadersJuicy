@@ -525,7 +525,19 @@ MonoBehaviour:
   _gameState: {fileID: 879569045}
   _onPhaseChange:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1370504293}
+        m_TargetAssemblyTypeName: Leon.GlobalMaterialAnimator, Leon
+        m_MethodName: AddPhaseEffect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &436789616
 Transform:
   m_ObjectHideFlags: 0
@@ -3131,6 +3143,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1370504293 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
+  m_PrefabInstance: {fileID: 7141478081384108516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370504288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19caa8e08d265b449bbb65761d79a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Leon::Leon.GlobalMaterialAnimator
 --- !u!224 &1375873778 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 68804899782793192, guid: 4b645ada8b79adf499021fb2540867ca, type: 3}

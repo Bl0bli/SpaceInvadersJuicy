@@ -37,6 +37,8 @@ namespace Leon
         [SerializeField] private float _Lens_MultipleOrSingle = 0;
         [SerializeField] private float _Boiling = 0;
 
+        private int currentPhase = -1;
+
         private void Update() {
             if (_profile.TryGet(out LensDistortion lensDistortion)) {
                 lensDistortion.intensity.SetValue(new ClampedFloatParameter(_lDIntensity, -1, 1, true));
@@ -66,14 +68,23 @@ namespace Leon
         }
         
         public void AddPhaseEffect(int i) {
+            while (currentPhase < i) {
+                currentPhase += 1;
+                PlayPhase(currentPhase);
+            }
+        }
+
+        private void PlayPhase(int i) {
             switch (i) {
-                case 0:
+                case 0: 
                     break;
-                case 1:
+                case 1: 
+                    PostProcessAnimationPlayer.instance.PlayBulles();
                     break;
                 case 2: 
+                    PostProcessAnimationPlayer.instance.PlayChromaIdle();
                     break;
-                case 3:
+                case 3: //background
                     break;
                 default:
                     break;
