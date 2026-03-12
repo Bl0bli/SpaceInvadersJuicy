@@ -122,6 +122,7 @@ namespace Leon
         {
             if (collision.gameObject.tag != collideWithTag) { return; }
             
+            
             GameManager.Instance.ResetCombo();
         }
 

@@ -185,14 +185,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8631359d6b5541d4f9a33b40fca4d969, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _movingModeWhenShooting: 0
+  _slowerFactor: 0
+  _fasterFactor: 0
   deadzone: 0.2
   speed: 4
   bulletPrefab: {fileID: 7369880722360228486, guid: 42269f87d33f3eb4898473401db125ae, type: 3}
   shootCooldown: 0.3
-  collideWithTag: Untagged
+  collideWithTag: Milk
   _tongueTransform: {fileID: 1357681037120898571}
   _tongue: {fileID: 2402621192121375041}
-  _animTime: 1
+  _animTimeStretch: 1
+  _animTimeUnStretch: 1
   _tongueMAXDist: 7
   _tongueFreezingTime: 0.5
   _stretchTongueCurve:
@@ -219,6 +223,18 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  _unStretchTongueCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  OnTongueStretch:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTongueUnStretch:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7666988953879305588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,11 +577,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1dca3af0c6594f4d89a7e68b9223c13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Leon::Leon.Tongue
+  _colliderTopTongue: {fileID: 0}
   _colliderAlongTongue: {fileID: 1294459021799658572}
   onInvaderCaught:
     m_PersistentCalls:
       m_Calls: []
   OnSwallow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFirstCatch:
     m_PersistentCalls:
       m_Calls: []
   _invaders: []
