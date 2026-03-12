@@ -22,7 +22,7 @@ namespace Leon
         [SerializeField] private AudioSource _asSounds;
         [SerializeField] private GameState _gameState;
 
-        [SerializeField] private UnityEvent _onPhaseChange;
+        [SerializeField] private UnityEvent<int> _onPhaseChange;
 
         private void OnEnable() {
             _gameState.onTotalScoreChangeEvent += OnTotalScoreChange;
@@ -49,16 +49,18 @@ namespace Leon
         private void OnTotalScoreChange(float val) {
             AudioClip newClipMusic = null;
             AudioClip newClipFire = null;
+            int index = 0;
             for (int i = 0; i < GlobalScoreTresholds.Length; i++) {
                 if (val > GlobalScoreTresholds[i]) {
                     newClipMusic = music[i];
                     newClipFire = fire[i];
+                    index = i;
                 }
             }
 
             if (_asMusic.generator != newClipMusic && newClipMusic) {
                 _asMusic.generator = newClipMusic;
-                _onPhaseChange?.Invoke();
+                _onPhaseChange?.Invoke(index);
                 _asMusic.Play();
             }
             
