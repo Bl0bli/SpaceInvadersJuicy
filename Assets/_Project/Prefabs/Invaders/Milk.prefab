@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1286698669282929100, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286698669282929100, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 9.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 1727431462037305599, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4106201977274688763, guid: bf9fbaa93ffd9e241b93bde7a8d6fdb7, type: 3}
     - target: {fileID: 1727431462037305599, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_Color.b
       value: 0.8537736
@@ -73,6 +85,18 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4724970415690683995, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724970415690683995, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724970415690683995, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724970415690683995, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -111,6 +135,10 @@ PrefabInstance:
     - target: {fileID: 4724970415690683995, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724970415690683995, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7429291776354201643, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_Name
