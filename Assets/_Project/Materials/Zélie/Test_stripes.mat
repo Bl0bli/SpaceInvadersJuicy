@@ -37,13 +37,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Density: 6
+    - _Density: 15
     - _Pan_X: 0
     - _Pan_Y: 0
-    - _Power: 0.1
-    - _Power_Saturation: 2.98
+    - _Power: 0.03
+    - _Power_Saturation: 1
     - _Sine_divide: 2
-    - _Speed_divide: 6.59
+    - _Speed_divide: 2
     - _Speed_divide_2: 0
     - _Tile_X: 0
     - _Tile_Y: 0
