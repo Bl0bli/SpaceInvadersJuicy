@@ -215,12 +215,12 @@ namespace Leon
             if (indexRow != -1) {
                 Row row = invaderPerRow[indexRow];
                 row.invaders.Remove(invader);
-                if (row.invaders.Count <= 0) {
+                /*if (row.invaders.Count <= 0) {
                     invaderPerRow.RemoveAt(indexRow);
                 }
                 else {
                     invaderPerRow[indexRow] = row;
-                }
+                }*/
             }
         }
 
