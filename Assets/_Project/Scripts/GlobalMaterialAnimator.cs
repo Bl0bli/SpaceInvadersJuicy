@@ -34,6 +34,8 @@ namespace Leon
         [SerializeField] private float _lensStrength = 1;
         [SerializeField] private float _lensMin = -0.2f;
         [SerializeField] private float _lensMax = 0.5f;
+        [SerializeField] private float _Lens_MultipleOrSingle = 0;
+        [SerializeField] private float _Boiling = 0;
 
         private void Update() {
             if (_profile.TryGet(out LensDistortion lensDistortion)) {
@@ -59,6 +61,8 @@ namespace Leon
             _chromaticAberrationMaterial.SetFloat("_Lens_Strengh", _lensStrength);
             _chromaticAberrationMaterial.SetFloat("_Lens_Min", _lensMin);
             _chromaticAberrationMaterial.SetFloat("_Lens_Max", _lensMax);
+            _chromaticAberrationMaterial.SetFloat("_Lens_MultipleOrSingle", _Lens_MultipleOrSingle);
+            _chromaticAberrationMaterial.SetFloat("_Boiling", _Boiling);
         }
     }
 };
