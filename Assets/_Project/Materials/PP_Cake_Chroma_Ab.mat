@@ -23,6 +23,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_133dacf59a204f719a5fb69e939086f4_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: ff863930ab4780c4fab388af3c451ae3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_865c93db22c54bd2afa993524407afd4_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 3e082a8b3a145a14ab1c005c3d1876d4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_eb9fb541625f484fb9f72483e8f7e0e5_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 3e082a8b3a145a14ab1c005c3d1876d4, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -42,14 +50,16 @@ Material:
     m_Ints: []
     m_Floats:
     - _B_Offset: -0.05
-    - _ChromAb_Strenght: 1
+    - _Boiling: 0
+    - _ChromAb_Strenght: 0
     - _Distortion: 1
     - _G_Offset: 0
     - _HDR: 1
     - _Lens_Max: 0.5
     - _Lens_Min: -0.2
+    - _Lens_MultipleOrSingle: 0
     - _Lens_Multiple_0_OrSingle_1: 1
-    - _Lens_Strengh: 1
+    - _Lens_Strengh: 6.25
     - _R_Offset: 0.05
     - _fwghf: 1
     m_Colors:
