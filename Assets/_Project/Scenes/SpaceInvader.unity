@@ -4031,6 +4031,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
+      propertyPath: _Strength
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
       propertyPath: _BOffset.x
       value: -0.02
       objectReference: {fileID: 0}
@@ -4052,7 +4056,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
       propertyPath: _lensStrength
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
       propertyPath: _kaleidoscopeMaterial
