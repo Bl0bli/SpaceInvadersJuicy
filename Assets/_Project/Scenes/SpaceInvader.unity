@@ -209,7 +209,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65bb027980d33a43844a2825cdc3b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Leon::Leon.PillFactory
-  _pillPrefab: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+  table:
+  - pill: {fileID: 5241866858827710405, guid: e3ef353d7ec5a6e4395c9060d5cbe69d, type: 3}
+    weight: 1
+  - pill: {fileID: 531712130056479088, guid: cafd417bb53f9a84da7d639eb65da757, type: 3}
+    weight: 2
+  - pill: {fileID: 3187055742045965805, guid: 6e3522899a8c4ba48a986d07a88dfda1, type: 3}
+    weight: 2
+  - pill: {fileID: 4698174182020681650, guid: f5cd7bf8843daef4098870db50221331, type: 3}
+    weight: 2
 --- !u!4 &466450352
 Transform:
   m_ObjectHideFlags: 0
