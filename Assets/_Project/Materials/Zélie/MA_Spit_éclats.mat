@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PP_Cake_Chroma_Ab
-  m_Shader: {fileID: -6465566751694194690, guid: 99ec6a4e53ee86a49b6583996560eed7, type: 3}
+  m_Name: "MA_Spit_\xE9clats"
+  m_Shader: {fileID: 4800000, guid: 19c71a4dd5d4f2440821448182d4ff86, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,6 +23,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _TextureSample0:
+        m_Texture: {fileID: 2800000, guid: 67282b67bb5aaf243b7271e7cbdc6fca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -37,23 +41,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _B_Offset: -0.05
-    - _ChromAb_Strenght: 1
-    - _Distortion: 1
-    - _G_Offset: 0
-    - _HDR: 1
-    - _Lens_Max: 0.5
-    - _Lens_Min: -0.2
-    - _Lens_Strengh: 1
-    - _R_Offset: 0.05
-    - _fwghf: 1
+    - _Tile_X: 1
+    - _Tile_Y: 1
     m_Colors:
-    - _B_Offset: {r: -0.02, g: 0.02, b: 0, a: 0}
-    - _B_Scale: {r: 1, g: 1, b: 0, a: 0}
-    - _G_Offset: {r: 0, g: 0, b: 0, a: 0}
-    - _G_Scale: {r: 1, g: 1, b: 0, a: 0}
-    - _Lens_Pos: {r: 0, g: 0, b: 0, a: 0}
-    - _R_Offset: {r: 0.02, g: -0.02, b: 0, a: 0}
-    - _R_Scale: {r: 1, g: 1, b: 0, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
