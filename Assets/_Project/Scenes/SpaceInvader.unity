@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Leon::Leon.GlobalSounds
   BaseMusic: {fileID: 8300000, guid: 5ea50e99ba3b6624397a5f605931b517, type: 3}
-  GlobalScoreTresholds: 3200000064000000c8000000f4010000
+  GlobalScoreTresholds: f4010000dc050000b80b000088130000
   music:
   - {fileID: 8300000, guid: c364133a75ce3744f8c1c67c57905a94, type: 3}
   - {fileID: 8300000, guid: f3d3b8087f832874b86c0a1575ef29fc, type: 3}
