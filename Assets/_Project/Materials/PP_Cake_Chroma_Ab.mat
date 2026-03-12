@@ -38,12 +38,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _B_Offset: -0.05
+    - _ChromAb_Strenght: 0
     - _Distortion: 1
     - _G_Offset: 0
     - _HDR: 1
     - _Lens_Max: 0.5
     - _Lens_Min: -0.2
-    - _Lens_Strengh: 1
+    - _Lens_Strengh: 0
     - _R_Offset: 0.05
     - _fwghf: 1
     m_Colors:
