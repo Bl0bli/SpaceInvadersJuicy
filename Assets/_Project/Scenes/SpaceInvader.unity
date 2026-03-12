@@ -4161,6 +4161,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
+      propertyPath: _Leon
+      value: 
+      objectReference: {fileID: 2100000, guid: 8b05cb7cf3140854ab609cb26cf91fe5, type: 2}
+    - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
       propertyPath: _power
       value: 0.0222
       objectReference: {fileID: 0}
