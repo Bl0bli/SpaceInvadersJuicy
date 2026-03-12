@@ -22,17 +22,18 @@ namespace Leon
 
         [Header("ChromaticAberration"), SerializeField]
         private Material _chromaticAberrationMaterial;
-        [SerializeField] private float _HDR;
-        [SerializeField] private Vector2 _RScale;
-        [SerializeField] private Vector2 _ROffset;
-        [SerializeField] private Vector2 _GScale;
+        [SerializeField] private float _HDR = 1;
+        [SerializeField] private float _Strength = 1;
+        [SerializeField] private Vector2 _RScale = new Vector2(1,1);
+        [SerializeField] private Vector2 _ROffset = new Vector2(0.02f, - 0.02f);
+        [SerializeField] private Vector2 _GScale = new Vector2(1,1);
         [SerializeField] private Vector2 _GOffset;
-        [SerializeField] private Vector2 _BScale;
-        [SerializeField] private Vector2 _BOffset;
+        [SerializeField] private Vector2 _BScale = new Vector2(1,1);
+        [SerializeField] private Vector2 _BOffset = new Vector2(-0.02f, 0.02f);
         [SerializeField] private Vector2 _lensPos;
-        [SerializeField] private float _lensStrength;
-        [SerializeField] private float _lensMin;
-        [SerializeField] private float _lensMax;
+        [SerializeField] private float _lensStrength = 1;
+        [SerializeField] private float _lensMin = -0.2f;
+        [SerializeField] private float _lensMax = 0.5f;
 
         private void Update() {
             if (_profile.TryGet(out LensDistortion lensDistortion)) {
@@ -47,6 +48,7 @@ namespace Leon
             
             //ChromaticAberration
             _chromaticAberrationMaterial.SetFloat("_HDR", _HDR);
+            _chromaticAberrationMaterial.SetFloat("_ChromAb_Strenght", _Strength);
             _chromaticAberrationMaterial.SetVector("_R_Scale", _RScale);
             _chromaticAberrationMaterial.SetVector("_R_Offset", _ROffset);
             _chromaticAberrationMaterial.SetVector("_G_Scale", _GScale);
@@ -57,7 +59,6 @@ namespace Leon
             _chromaticAberrationMaterial.SetFloat("_Lens_Strengh", _lensStrength);
             _chromaticAberrationMaterial.SetFloat("_Lens_Min", _lensMin);
             _chromaticAberrationMaterial.SetFloat("_Lens_Max", _lensMax);
-            
         }
     }
 };
