@@ -1012,22 +1012,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2402621192121375041, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnSwallow.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402621192121375041, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnSwallow.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2402621192121375041, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnSwallow.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 805531689}
-    - target: {fileID: 2402621192121375041, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnSwallow.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 3036092329077277066, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1071,58 +1055,6 @@ PrefabInstance:
     - target: {fileID: 4814374592533298842, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4853303139955066165, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4853303139955066165, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: emitterVelocityMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4853303139955066165, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 4853303139955066165, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5855919194627892903, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7143965941452317541, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7143965941452317541, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: emitterVelocityMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7143965941452317541, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 7143965941452317541, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8227342990197118203, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8227342990197118203, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: emitterVelocityMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8227342990197118203, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 8227342990197118203, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
