@@ -7,10 +7,17 @@ using UnityEngine.InputSystem;
 
 namespace Leon
 {
+    public enum ShootMovingMode
+    {
+        SAME,
+        SLOWER,
+        FASTER,
+        STOPPED
+    }
     public class Player : MonoBehaviour
     {
         [Header("Editor Params")] 
-        [SerializeField] private bool _stopMovesWhenTongueStretch = false;
+        [SerializeField] private ShootMovingMode _movingModeWhenShooting = ShootMovingMode.SAME;
         
         [SerializeField] private float deadzone = 0.3f;
         [SerializeField] private float speed = 1f;
@@ -57,11 +64,30 @@ namespace Leon
         }
         public void UpdateMovement()
         {
-            if (Mathf.Abs(_moves) < deadzone || (_stopMovesWhenTongueStretch && _stretching)) { return; }
-
+            if (Mathf.Abs(_moves) < deadzone || (_movingModeWhenShooting == ShootMovingMode.STOPPED && _stretching)) { return; }
+            
             _moves = Mathf.Sign(_moves);
-            float delta = _moves * speed * Time.deltaTime;
+            float delta = _moves * speed * Time.deltaTime * HandleMovingMode(_stretching);;
             transform.position = GameManager.Instance.KeepInBounds(transform.position + Vector3.right * delta);
+        }
+
+        private float HandleMovingMode(bool stretching)
+        {
+            if (!_stretching) return 1;
+            switch (_movingModeWhenShooting)
+            {
+                case ShootMovingMode.SAME:
+                    return 1;
+                    break;
+                case ShootMovingMode.SLOWER:
+                    return _slowerFactor;
+                    break;
+                case ShootMovingMode.FASTER:
+                    return _fasterFactor;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
         public void UpdateActions(InputAction.CallbackContext ctx)
