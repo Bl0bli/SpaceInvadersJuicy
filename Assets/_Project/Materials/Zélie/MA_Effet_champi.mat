@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MA_Kaleidoscope
+  m_Name: MA_Effet_champi
   m_Shader: {fileID: -6465566751694194690, guid: 4f7b95fdf2227cf4987e78e6ab1916c8, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -39,6 +39,6 @@ Material:
     m_Floats:
     - _Enable: 0
     m_Colors:
-    - _Center: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _Center: {r: 0.5, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
