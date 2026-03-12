@@ -44,16 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19caa8e08d265b449bbb65761d79a0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Leon::Leon.GlobalMaterialAnimator
-  _profile: {fileID: 11400000, guid: d810a19b6e66feb4e997b2cc2a6ae274, type: 2}
-  _lDIntensity: 0
+  _profile: {fileID: 11400000, guid: 3f9215ea0144899419cfbc0957140d3f, type: 2}
+  _lDIntensity: 0.33
   _xMultiplier: 0
   _yMultiplier: 0
   _lDCenter: {x: 0.5, y: 0.5}
-  _scale: 0.01
+  _scale: 1
   _kaleidoscopeMaterial: {fileID: 2100000, guid: 684ae2958cbc37c4fb0209aaa5096c10, type: 2}
   _enable: 0
   _chromaticAberrationMaterial: {fileID: 2100000, guid: 1ca189586710b2f4494d4b3160137a1a, type: 2}
   _HDR: 0
+  _Strength: 1
   _RScale: {x: 0, y: 0}
   _ROffset: {x: 0, y: 0}
   _GScale: {x: 0, y: 0}
