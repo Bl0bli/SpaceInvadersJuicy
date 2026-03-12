@@ -103,8 +103,9 @@ namespace Leon
 
         public void UpdateActions(InputAction.CallbackContext ctx)
         {
-            if (ctx.performed && Time.time > lastShootTimestamp + shootCooldown)
+            if (!_stretching && _stretchRoutine == null && ctx.performed && Time.time > lastShootTimestamp + shootCooldown)
             {
+                _stretching = true;
                 Shoot();
             }
         }
@@ -126,7 +127,6 @@ namespace Leon
 
         IEnumerator StretchTongue()
         {
-            _stretching = true;
             float t = 0;
             OnTongueStretch?.Invoke();
             while (t < _animTimeStretch)
@@ -155,14 +155,16 @@ namespace Leon
                     Mathf.Lerp(_startY, startDist, p), _tongueTransform.position.z);
                 yield return new WaitForEndOfFrame();
             }
+            _stretchRoutine = null;
+            _stretching = false;
             _tongueTransform.position = new Vector3(_tongueTransform.position.x, _startY, _tongueTransform.position.z);
             _tongue.Swallow();
-            _stretching = false;
         }
 
         private void StopStretch()
         {
             StopCoroutine(_stretchRoutine);
+            _stretchRoutine = null;
             StartCoroutine(UnStretchTongue(_tongueTransform.position.y));
         }
     }
