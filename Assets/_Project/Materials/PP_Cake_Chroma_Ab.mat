@@ -51,7 +51,7 @@ Material:
     m_Floats:
     - _B_Offset: -0.05
     - _Boiling: 0
-    - _ChromAb_Strenght: 0
+    - _ChromAb_Strenght: 0.01560933
     - _Distortion: 1
     - _G_Offset: 0
     - _HDR: 1

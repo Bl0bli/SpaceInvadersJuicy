@@ -42,8 +42,10 @@ namespace Leon
 
         [SerializeField, Range(0f,0.1f)] private float _power;
         [SerializeField] private float _density;
-        
 
+
+        [Header("Leon"), SerializeField] private Material _Leon;
+        
         private int currentPhase = -1;
 
         private void Update() {
@@ -85,8 +87,11 @@ namespace Leon
         }
 
         private void PlayPhase(int i) {
+            Debug.Log($"PlayPhase : {i}");
             switch (i) {
                 case 0: 
+                    _Leon.SetFloat("_Multicolor",1f);
+                    Debug.Log("Hello");
                     break;
                 case 1:
                     PostProcessAnimationPlayer.instance.PlayChromaIdle();
