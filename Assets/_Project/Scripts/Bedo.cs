@@ -17,6 +17,10 @@ namespace Leon
 
         public float Advancement => remainingTime / totalTime;
 
+        private void Start() {
+            remainingTime = totalTime;
+        }
+
         private void Update() {
             remainingTime -= Time.deltaTime;
             if (remainingTime < 0) {
