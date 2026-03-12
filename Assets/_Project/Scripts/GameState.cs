@@ -14,9 +14,13 @@ namespace Leon
 
         public static event Action onComboReset;
         [SerializeField] private UnityEvent<float> onCurrentComboChange;
+        public event Action<float> onCurrentComboChangeEvent;
         [SerializeField] private UnityEvent<float> onCurrentMultiplierChange;
+        public event Action<float> onCurrentMultiplierChangeEvent;
         [SerializeField] private UnityEvent<float> onCurrentBaseScoreChange;
+        public event Action<float> onCurrentBaseScoreChangeEvent;
         [SerializeField] private UnityEvent<float> onTotalScoreChange;
+        public event Action<float> onTotalScoreChangeEvent;
         
         public float CurrentCombo
         {
@@ -24,6 +28,7 @@ namespace Leon
             set
             {
                 currentCombo = value;
+                onCurrentComboChangeEvent?.Invoke(value);
                 onCurrentComboChange?.Invoke(value);
             }
         }
@@ -33,6 +38,7 @@ namespace Leon
             get => totalScore;
             set{
                 totalScore = value;
+                onTotalScoreChangeEvent?.Invoke(value);
                 onTotalScoreChange?.Invoke(value);
             }
         }
@@ -42,6 +48,7 @@ namespace Leon
             get => currentMultiplier;
             set{
                 currentMultiplier = value;
+                onCurrentMultiplierChangeEvent?.Invoke(value);
                 onCurrentMultiplierChange?.Invoke(value);
             }
         }
@@ -51,6 +58,7 @@ namespace Leon
             get => currentBaseScore;
             set{
                 currentBaseScore = value;
+                onCurrentBaseScoreChange?.Invoke(value);
                 onCurrentBaseScoreChange?.Invoke(value);
             }
         }
@@ -64,7 +72,14 @@ namespace Leon
 
         public void ResetCombo() {
             CurrentCombo = 0;
+            ApplyScore();
             onComboReset?.Invoke();
+        }
+
+        public void ApplyScore() {
+            TotalScore += CurrentBaseScore * CurrentMultiplier;
+            CurrentBaseScore = 0;
+            CurrentMultiplier = 1;
         }
     }
 }
