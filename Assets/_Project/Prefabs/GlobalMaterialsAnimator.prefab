@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8344676225081761169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3423623778085760970}
+  - component: {fileID: 7195474060257125815}
+  m_Layer: 0
+  m_Name: GlobalMaterialsAnimator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3423623778085760970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8344676225081761169}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7195474060257125815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8344676225081761169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19caa8e08d265b449bbb65761d79a0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Leon::Leon.GlobalMaterialAnimator
+  _profile: {fileID: 11400000, guid: d810a19b6e66feb4e997b2cc2a6ae274, type: 2}
+  _lDIntensity: 0
+  _xMultiplier: 0
+  _yMultiplier: 0
+  _lDCenter: {x: 0.5, y: 0.5}
+  _scale: 0.01
+  _kaleidoscopeMaterial: {fileID: 2100000, guid: 684ae2958cbc37c4fb0209aaa5096c10, type: 2}
+  _enable: 0
+  _chromaticAberrationMaterial: {fileID: 2100000, guid: 1ca189586710b2f4494d4b3160137a1a, type: 2}
+  _HDR: 0
+  _RScale: {x: 0, y: 0}
+  _ROffset: {x: 0, y: 0}
+  _GScale: {x: 0, y: 0}
+  _GOffset: {x: 0, y: 0}
+  _BScale: {x: 0, y: 0}
+  _BOffset: {x: 0, y: 0}
+  _lensPos: {x: 0, y: 0}
+  _lensStrength: 0
+  _lensMin: 0
+  _lensMax: 0
