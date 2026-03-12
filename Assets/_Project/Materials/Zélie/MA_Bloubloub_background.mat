@@ -77,7 +77,7 @@ Material:
     - _N1_X_Tile: 1
     - _N1_Y_Speed: -0.3
     - _N1_Y_Tile: 1
-    - _N2_Smooth_Min: 0.57
+    - _N2_Smooth_Min: -0.15
     - _N2_Smooth_max: 1.91
     - _N2_Smooth_min: 0
     - _N2_Tile_X: 1
