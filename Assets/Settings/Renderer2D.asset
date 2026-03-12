@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2878714694673673467
+--- !u!114 &-3935939769485732408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,8 +47,8 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: 983856745815323954}
   - {fileID: 6046085091103717570}
-  - {fileID: -2878714694673673467}
-  m_RendererFeatureMap: 32b531647f5ca70dc2b805595b02e853055347be3cc00cd8
+  - {fileID: -3935939769485732408}
+  m_RendererFeatureMap: 32b531647f5ca70dc2b805595b02e853c8557816a2bb60c9
   m_UseNativeRenderPass: 0
   m_LayerMask:
     serializedVersion: 2
