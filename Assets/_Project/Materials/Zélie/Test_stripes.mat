@@ -40,7 +40,7 @@ Material:
     - _Density: 15
     - _Pan_X: 0
     - _Pan_Y: 0
-    - _Power: 0.03
+    - _Power: 0.008416771
     - _Power_Saturation: 1
     - _Sine_divide: 2
     - _Speed_divide: 2
