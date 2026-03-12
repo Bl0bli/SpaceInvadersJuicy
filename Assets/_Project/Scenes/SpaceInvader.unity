@@ -523,6 +523,9 @@ MonoBehaviour:
   _asFire: {fileID: 436789619}
   _asSounds: {fileID: 436789618}
   _gameState: {fileID: 879569045}
+  _onPhaseChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &436789616
 Transform:
   m_ObjectHideFlags: 0
