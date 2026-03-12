@@ -37,6 +37,13 @@ namespace Leon
         [SerializeField] private float _Lens_MultipleOrSingle = 0;
         [SerializeField] private float _Boiling = 0;
 
+        [Header("Sinusoidale"), SerializeField]
+        private Material _sinusoidalematerial;
+
+        [SerializeField, Range(0f,0.1f)] private float _power;
+        [SerializeField] private float _density;
+        
+
         private int currentPhase = -1;
 
         private void Update() {
@@ -65,6 +72,9 @@ namespace Leon
             _chromaticAberrationMaterial.SetFloat("_Lens_Max", _lensMax);
             _chromaticAberrationMaterial.SetFloat("_Lens_MultipleOrSingle", _Lens_MultipleOrSingle);
             _chromaticAberrationMaterial.SetFloat("_Boiling", _Boiling);
+            
+            _sinusoidalematerial.SetFloat("_Power", _power);
+            _sinusoidalematerial.SetFloat("_Density", _density);
         }
         
         public void AddPhaseEffect(int i) {
@@ -78,11 +88,11 @@ namespace Leon
             switch (i) {
                 case 0: 
                     break;
-                case 1: 
-                    PostProcessAnimationPlayer.instance.PlayBulles();
+                case 1:
+                    PostProcessAnimationPlayer.instance.PlayChromaIdle();
                     break;
                 case 2: 
-                    PostProcessAnimationPlayer.instance.PlayChromaIdle();
+                    PostProcessAnimationPlayer.instance.PlayBulles();
                     break;
                 case 3: //background
                     break;
