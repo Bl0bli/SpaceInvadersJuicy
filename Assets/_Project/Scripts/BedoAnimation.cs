@@ -13,7 +13,6 @@ namespace Leon
         }
 
         private void Update() {
-            Debug.Log(bedo.Advancement);
             mat.SetFloat("_Bedo_Consumption", bedo.Advancement);
         }
     }

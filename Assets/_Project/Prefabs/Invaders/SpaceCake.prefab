@@ -8,13 +8,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5783892040050959121, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: effect
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1286698669282929100, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 8.45
+      value: 1.69
       objectReference: {fileID: 0}
     - target: {fileID: 1286698669282929100, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 9
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 1727431462037305599, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_Sprite
@@ -846,7 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[198215815289372762].always
@@ -1057,12 +1061,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 6141530321986790914}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 5857889643729398674}
+    - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[198215815289372776].pillEffects.Array.size
@@ -1079,6 +1099,14 @@ PrefabInstance:
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: 'managedReferences[198215815289372776].pillEffects.Array.data[2]'
       value: 198215815289372779
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Leon.PlayEffect, Leon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+      propertyPath: OnEaten.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4724970415690683995, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_LocalScale.x
@@ -1250,3 +1278,14 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5857889643729398674 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -5783892040050959121, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
+  m_PrefabInstance: {fileID: 9146840862031067005}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867374055891470166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735d1282ac04ca343b6d2d245215164c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Leon::Leon.PlayEffect
