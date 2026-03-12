@@ -28,6 +28,7 @@ namespace Leon
             typeof(AddMultiplyer),
             typeof(MultiplyMultiplyer),
             typeof(AddTotalScore),
+            typeof(AddCombo),
             typeof(CancelEverything)
         };
         

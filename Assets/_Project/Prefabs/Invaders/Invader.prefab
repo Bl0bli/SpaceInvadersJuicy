@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1727431462037305599}
   - component: {fileID: 9109969425864263349}
   - component: {fileID: 4594621372514351311}
+  - component: {fileID: -5783892040050959121}
   - component: {fileID: 1286698669282929100}
   m_Layer: 0
   m_Name: Invader
@@ -110,6 +111,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7369880722360228486, guid: 47d2029f071079c4a98ac35325b21f24, type: 3}
   shootAt: {fileID: 8808591723042360307}
   collideWithTag: Player
+  collideWithSecondTag: Tongue
 --- !u!114 &4594621372514351311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +126,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Leon::Leon.Pill
   _effect:
     rid: 8124887587739664740
+  OnEaten:
+    m_PersistentCalls:
+      m_Calls: []
   references:
     version: 2
     RefIds:
@@ -160,6 +165,19 @@ MonoBehaviour:
     - rid: 8124887587739664748
       type: {class: Always, ns: Leon, asm: Leon}
       data: 
+--- !u!114 &-5783892040050959121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7429291776354201643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735d1282ac04ca343b6d2d245215164c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Leon::Leon.PlayEffect
+  effect: 0
 --- !u!61 &1286698669282929100
 BoxCollider2D:
   m_ObjectHideFlags: 0
