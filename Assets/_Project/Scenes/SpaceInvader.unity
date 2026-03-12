@@ -4161,6 +4161,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
+      propertyPath: _power
+      value: 0.0222
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
+      propertyPath: _density
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
       propertyPath: _lensMax
       value: 0.5
       objectReference: {fileID: 0}
@@ -4224,6 +4232,10 @@ PrefabInstance:
       propertyPath: _lensStrength
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
+      propertyPath: _sinusoidalematerial
+      value: 
+      objectReference: {fileID: 2100000, guid: 44f8d5bde8e39f84c8194801917f8204, type: 2}
     - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
       propertyPath: _kaleidoscopeMaterial
       value: 
