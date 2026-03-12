@@ -48,7 +48,7 @@ namespace Leon
         private float _moves = 0;
         private Vector3 _target;
         float _startY = 0;
-        private Coroutine _stretchRoutine;
+        private Coroutine _stretchRoutine, _unStretchRoutine;
         private bool _stretching = false;
 
         private void OnValidate()
@@ -139,7 +139,7 @@ namespace Leon
             }
             _tongueTransform.position = new Vector3(_tongueTransform.position.x, _startY + _tongueMAXDist, _tongueTransform.position.z);
 
-            yield return StartCoroutine(UnStretchTongue(_tongueTransform.position.y));
+            yield return _unStretchRoutine = StartCoroutine(UnStretchTongue(_tongueTransform.position.y));
         }
 
         IEnumerator UnStretchTongue(float startDist)
@@ -157,15 +157,20 @@ namespace Leon
             }
             _stretchRoutine = null;
             _stretching = false;
+            _unStretchRoutine = null;
             _tongueTransform.position = new Vector3(_tongueTransform.position.x, _startY, _tongueTransform.position.z);
             _tongue.Swallow();
         }
 
         private void StopStretch()
         {
-            StopCoroutine(_stretchRoutine);
-            _stretchRoutine = null;
-            StartCoroutine(UnStretchTongue(_tongueTransform.position.y));
+            if (_stretchRoutine != null)
+            {
+                StopCoroutine(_stretchRoutine);
+                _stretchRoutine = null; 
+            }
+            
+            if(_unStretchRoutine == null) _unStretchRoutine = StartCoroutine(UnStretchTongue(_tongueTransform.position.y));
         }
     }
 }
