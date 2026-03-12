@@ -9,6 +9,9 @@ namespace Leon
 {
     public class Player : MonoBehaviour
     {
+        [Header("Editor Params")] 
+        [SerializeField] private bool _stopMovesWhenTongueStretch = false;
+        
         [SerializeField] private float deadzone = 0.3f;
         [SerializeField] private float speed = 1f;
 
@@ -34,6 +37,7 @@ namespace Leon
         private Vector3 _target;
         float _startY = 0;
         private Coroutine _stretchRoutine;
+        private bool _stretching = false;
 
         private void Start()
         {
@@ -53,7 +57,7 @@ namespace Leon
         }
         public void UpdateMovement()
         {
-            if (Mathf.Abs(_moves) < deadzone) { return; }
+            if (Mathf.Abs(_moves) < deadzone || (_stopMovesWhenTongueStretch && _stretching)) { return; }
 
             _moves = Mathf.Sign(_moves);
             float delta = _moves * speed * Time.deltaTime;
@@ -84,6 +88,7 @@ namespace Leon
 
         IEnumerator StretchTongue()
         {
+            _stretching = true;
             float t = 0;
             OnTongueStretch?.Invoke();
             while (t < _animTimeStretch)
@@ -114,6 +119,7 @@ namespace Leon
             }
             _tongueTransform.position = new Vector3(_tongueTransform.position.x, _startY, _tongueTransform.position.z);
             _tongue.Swallow();
+            _stretching = false;
         }
 
         private void StopStretch()
