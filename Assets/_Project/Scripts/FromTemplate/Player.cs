@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -18,6 +19,10 @@ namespace Leon
     {
         [Header("Editor Params")] 
         [SerializeField] private ShootMovingMode _movingModeWhenShooting = ShootMovingMode.SAME;
+        private bool _slowerFactorValue; 
+        private bool _fasterFactorValue;
+        [SerializeField, ShowIf("_slowerFactorValue"), Range(0, 0.99f)] private float _slowerFactor;
+        [SerializeField, ShowIf	("_fasterFactorValue"), Range(1, 5)] private float _fasterFactor;
         
         [SerializeField] private float deadzone = 0.3f;
         [SerializeField] private float speed = 1f;
@@ -45,6 +50,12 @@ namespace Leon
         float _startY = 0;
         private Coroutine _stretchRoutine;
         private bool _stretching = false;
+
+        private void OnValidate()
+        {
+            _slowerFactorValue = _movingModeWhenShooting == ShootMovingMode.SLOWER;
+            _fasterFactorValue = _movingModeWhenShooting == ShootMovingMode.FASTER;
+        }
 
         private void Start()
         {
