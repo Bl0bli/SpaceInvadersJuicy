@@ -25,7 +25,6 @@ namespace Leon
         }
         
         private void OnOwnerEaten() {
-            Debug.Log("Pill eaten");
             OnEaten?.Invoke();
             GameManager.Instance.GameState.CurrentCombo += 1;
             _effect.Activate(GameManager.Instance.GameState);

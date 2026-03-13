@@ -245,7 +245,6 @@ namespace Leon
         }
 
         public void AddNewRow() {
-            Debug.Log("New Row");
             int index = invaderPerRow.Count;
             invaderPerRow.Add(new() { id = index, invaders = new() });
             for (int j = 0; j < pillPerColumn; j++) {
