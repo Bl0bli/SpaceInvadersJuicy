@@ -45,7 +45,6 @@ namespace Leon
 
 
         [Header("Leon"), SerializeField] private Material _Leon;
-        [Header("Fond"), SerializeField] private GameObject _bg;
         
         private int currentPhase = -1;
 
@@ -100,8 +99,7 @@ namespace Leon
                 case 2: 
                     PostProcessAnimationPlayer.instance.PlayBulles();
                     break;
-                case 3: 
-                    _bg.SetActive(true);
+                case 3: //background
                     break;
                 default:
                     break;

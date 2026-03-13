@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5783892040050959121, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: effect
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1286698669282929100, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -514,7 +514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[198215839700484168].value
-      value: 50
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[198215839700484169].value
@@ -538,7 +538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[198215839700484182].value
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[198215839700484191].value
@@ -554,7 +554,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[198215839700484194].value
-      value: 200
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[198215839700484203].value
@@ -570,7 +570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[198215839700484206].value
-      value: 350
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4594621372514351311, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: managedReferences[198215839700484208].value
@@ -956,7 +956,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7053cf0411b10c44c950966d50c00e08, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -90,7 +90,7 @@ Material:
     - _AN_Y_Pan: 0
     - _AN_Y_Tile: 2
     - _AlphaGradient_Offset: 0.15
-    - _Alpha_Offset: 0.32
+    - _Alpha_Offset: 0.34
     - _B_Max: 0.01
     - _B_Min: -0
     - _B_Offset_Max: 2
@@ -99,11 +99,11 @@ Material:
     - _B_X_Tile: 3
     - _B_Y_Pan: 0
     - _B_Y_Tile: 2
-    - _Bedo_Consumption: 0.9168154
+    - _Bedo_Consumption: 0.7372422
     - _Burnt_Offset: 0.22
     - _Burnt_Scale: 0.5
     - _Burnt_Width: 0.075
-    - _Embers_Scale: 0.138
+    - _Embers_Scale: 0.142
     - _F_Bot_Max: 0.81
     - _F_Bot_Min: 0.08
     - _F_HDR: 10
@@ -115,8 +115,8 @@ Material:
     - _F_X_Tile: 1
     - _F_Y_Pan: 0.09
     - _F_Y_Tile: 3
-    - _Fire_Offset: 0.28
-    - _Fire_Scale: 0.067
+    - _Fire_Offset: 0.85
+    - _Fire_Scale: 0.116
     - _Fire_Width: 0.075
     - _Float0: 0.29
     - _Float1: 0.42
@@ -161,14 +161,14 @@ Material:
     - _f_dissolve_line_offset: 0.32
     - _f_dissolve_line_size: 0.25
     m_Colors:
-    - _A_Noise_Pan: {r: 0.1, g: -0.1, b: 0, a: 0}
-    - _A_Noise_Tile: {r: 1.5, g: 1.5, b: 0, a: 0}
+    - _A_Noise_Pan: {r: 0.2, g: -0.05, b: 0, a: 0}
+    - _A_Noise_Tile: {r: 6, g: 6, b: 0, a: 0}
     - _Burned_Color: {r: 0.2528302, g: 0.18750551, b: 0.06249199, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _F_Color: {r: 2, g: 1.10652, b: 0.47924513, a: 0}
     - _F_Noise_Pan: {r: 0.1, g: 0.05, b: 0, a: 0}
     - _F_Noise_Tile: {r: 1, g: 1, b: 0, a: 0}
-    - _Fire_Color: {r: 4.0000005, g: 2.349108, b: 0.837736, a: 0}
+    - _Fire_Color: {r: 3.3584905, g: 1.4032307, b: 0.5544677, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

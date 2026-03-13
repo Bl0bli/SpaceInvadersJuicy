@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5783892040050959121, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: effect
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1286698669282929100, guid: 7ab41d612eaa4c040b94ebea77be05a2, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -1264,7 +1264,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 7053cf0411b10c44c950966d50c00e08, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
