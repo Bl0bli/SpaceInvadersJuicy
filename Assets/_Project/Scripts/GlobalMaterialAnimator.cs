@@ -45,6 +45,7 @@ namespace Leon
 
 
         [Header("Leon"), SerializeField] private Material _Leon;
+        [SerializeField] private float _isHurt = 0;
         
         private int currentPhase = -1;
 
@@ -77,6 +78,9 @@ namespace Leon
             
             _sinusoidalematerial.SetFloat("_Power", _power);
             _sinusoidalematerial.SetFloat("_Density", _density);
+
+            //Leon
+            _Leon.SetFloat("_isHurt", _isHurt);
         }
         
         public void AddPhaseEffect(int i) {

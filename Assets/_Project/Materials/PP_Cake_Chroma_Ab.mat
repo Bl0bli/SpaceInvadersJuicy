@@ -57,7 +57,7 @@ Material:
     - _HDR: 1
     - _Lens_Max: 0.5
     - _Lens_Min: -0.2
-    - _Lens_MultipleOrSingle: 0
+    - _Lens_MultipleOrSingle: 1
     - _Lens_Multiple_0_OrSingle_1: 1
     - _Lens_Strengh: 0
     - _R_Offset: 0.05
@@ -67,7 +67,7 @@ Material:
     - _B_Scale: {r: 1, g: 1, b: 0, a: 0}
     - _G_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _G_Scale: {r: 1, g: 1, b: 0, a: 0}
-    - _Lens_Pos: {r: 0, g: 0, b: 0, a: 0}
+    - _Lens_Pos: {r: 0, g: 0.45, b: 0, a: 0}
     - _R_Offset: {r: 0.02, g: -0.02, b: 0, a: 0}
     - _R_Scale: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
