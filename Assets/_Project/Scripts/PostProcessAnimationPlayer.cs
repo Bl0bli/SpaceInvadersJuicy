@@ -12,7 +12,6 @@ namespace Leon
         private static readonly int chroma = Animator.StringToHash("Chroma");
         private static readonly int chromaIdle = Animator.StringToHash("ChromaIdle");
         private static readonly int bulles = Animator.StringToHash("Bulles");
-        private static readonly int pill = Animator.StringToHash("Pill");
 
         [SerializeField] private Animator _anim;
 
@@ -45,10 +44,6 @@ namespace Leon
         
         public void PlayBulles() {
             _anim.SetTrigger(bulles);
-        }
-        
-        public void PlayPill() {
-            _anim.SetTrigger(pill);
         }
     }
 }
