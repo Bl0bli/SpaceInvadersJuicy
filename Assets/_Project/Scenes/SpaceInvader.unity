@@ -2113,6 +2113,7 @@ GameObject:
   - component: {fileID: 879569044}
   - component: {fileID: 879569043}
   - component: {fileID: 879569045}
+  - component: {fileID: 879569046}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2258,6 +2259,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &879569046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879569042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f96c4ef0bb14f8c46be849738c78ed68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Leon::Leon.FXManager
+  _animator: {fileID: 1370504292}
 --- !u!1 &956376844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2408,6 +2422,46 @@ PrefabInstance:
     - target: {fileID: 4814374592533298842, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666988953879305588, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666988953879305588, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: f996d798-98b8-44df-bfff-71c9a995f0e9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666988953879305588, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: 'Player/ToggleAllFX[/Keyboard/numpad0]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666988953879305588, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666988953879305588, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666988953879305588, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 879569046}
+    - target: {fileID: 7666988953879305588, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666988953879305588, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleDisableAll
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666988953879305588, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Leon.FXManager, Leon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666988953879305588, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9108876254069482440, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
       propertyPath: _animTimeStretch
