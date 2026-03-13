@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
@@ -20,14 +21,25 @@ namespace Leon
         [Header("Punch Animation")]
         [SerializeField] private float punchStrength = 0.3f;
         [SerializeField] private float duration = 0.15f;
-        
-        
+
+        private bool _disabled = false;
+
+        private void Start()
+        {
+            FXManager.Instance.OnDisableAllToggled += OnDisableAll;
+        }
+
+        private void OnDisableAll(bool obj)
+        {
+            _disabled = obj;
+        }
+
         public void SetTotalScore(float value) {
             TotalScore.text = Mathf.FloorToInt(value).ToString();
             
             float ratio = Mathf.Clamp01(value / scoreForMaxScale);
             float targetScale = Mathf.Lerp(minScale, maxScaleScores, ratio);
-            AnimateText(TotalScore.transform, targetScale);
+            if(!_disabled) AnimateText(TotalScore.transform, targetScale);
         }
 
         public void SetMultiplier(float value) {
@@ -35,12 +47,12 @@ namespace Leon
             
             float multiplierScale = minScale + (value * 0.1f); 
             multiplierScale = Mathf.Min(multiplierScale, maxScaleScores);
-            AnimateText(Multiplier.transform, multiplierScale);
+            if(!_disabled) AnimateText(Multiplier.transform, multiplierScale);
         }
         
         public void SetBaseScore(float value) {
             BaseScore.text = Mathf.FloorToInt(value).ToString();
-            AnimateText(BaseScore.transform);
+            if(!_disabled) AnimateText(BaseScore.transform);
         }
         
         public void SetCombo(float value) {
@@ -48,7 +60,7 @@ namespace Leon
             
             float comboScale = minScale + (value * 0.1f); 
             comboScale = Mathf.Min(comboScale, maxScaleCombo);
-            AnimateText(Combo.transform, comboScale);
+            if(!_disabled) AnimateText(Combo.transform, comboScale);
         }
 
         private void AnimateText(Transform target, float baseScale = 1f)

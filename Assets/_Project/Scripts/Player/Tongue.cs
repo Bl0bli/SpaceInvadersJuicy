@@ -16,10 +16,17 @@ namespace Leon
         
         [SerializeField]private List<Invader> _invaders = new List<Invader>();
         private bool _hit = false;
+        private bool _disabled = false;
 
         private void Start()
         {
             DisableCollider();
+            FXManager.Instance.OnDisableAllToggled += OnDisableToggle;
+        }
+
+        private void OnDisableToggle(bool obj)
+        {
+            _disabled = obj;
         }
 
         public void CatchInvader(Invader invader)
@@ -28,12 +35,12 @@ namespace Leon
             {
                 _hit = true;
                 onHit?.Invoke();
-                OnFirstCatch?.Invoke();
+                if(!_disabled) OnFirstCatch?.Invoke();
             }
             if (_colliderAlongTongue.enabled == false) _colliderAlongTongue.enabled = true;
             invader.transform.SetParent(transform);
             _invaders.Add(invader);
-            onInvaderCaught?.Invoke();
+            if(!_disabled) onInvaderCaught?.Invoke();
         }
 
         public void DisableCollider()
