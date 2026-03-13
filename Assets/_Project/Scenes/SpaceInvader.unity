@@ -2367,43 +2367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3366081604176019878, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
       propertyPath: totalTime
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 3366081604176019878, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnEndBedo.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3366081604176019878, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnEndBedo.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3366081604176019878, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnEndBedo.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1236406442}
-    - target: {fileID: 3366081604176019878, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnEndBedo.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3366081604176019878, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnEndBedo.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ChangeScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 3366081604176019878, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnEndBedo.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Leon.SceneSwitcher, Leon
-      objectReference: {fileID: 0}
-    - target: {fileID: 3366081604176019878, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnEndBedo.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Fin
-      objectReference: {fileID: 0}
-    - target: {fileID: 3366081604176019878, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: OnEndBedo.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 4058088926351362646, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4814374592533298842, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2591,33 +2555,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4814374592533298842, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 733346523}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3705031293888850851, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1236406442}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
 --- !u!4 &1236406440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4814374592533298842, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
   m_PrefabInstance: {fileID: 1236406439}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1236406441 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3705031293888850851, guid: ffd024faca6a74e40b460da58aa3eab5, type: 3}
-  m_PrefabInstance: {fileID: 1236406439}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1236406442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236406441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55ff8897944aa3a43a320069074e6e21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Leon::Leon.SceneSwitcher
 --- !u!1 &1273350139
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,10 +3166,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fond_psych
       objectReference: {fileID: 0}
-    - target: {fileID: 3751227193795152075, guid: 2766b60fb3be8384699b67a59cdc3569, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4374735344095008880, guid: 2766b60fb3be8384699b67a59cdc3569, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3271,11 +3211,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2766b60fb3be8384699b67a59cdc3569, type: 3}
---- !u!1 &1371718156 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3751227193795152075, guid: 2766b60fb3be8384699b67a59cdc3569, type: 3}
-  m_PrefabInstance: {fileID: 1371718155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1375873778 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 68804899782793192, guid: 4b645ada8b79adf499021fb2540867ca, type: 3}
@@ -4278,10 +4213,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
-      propertyPath: _bg
-      value: 
-      objectReference: {fileID: 1371718156}
     - target: {fileID: 7195474060257125815, guid: 1b905fa5c6f070942a28d39b7de64c6e, type: 3}
       propertyPath: _HDR
       value: 1

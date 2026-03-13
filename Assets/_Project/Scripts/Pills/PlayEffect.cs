@@ -11,8 +11,7 @@ namespace Leon
             LensDrug,
             Chroma,
             ChromaIdle,
-            Kaleidoscope,
-            Pill
+            Kaleidoscope
         }
 
         [SerializeField] private Effect effect;
@@ -33,9 +32,6 @@ namespace Leon
                     break;
                 case Effect.Kaleidoscope:
                     PostProcessAnimationPlayer.instance.PlayKaleidoscope();
-                    break;
-                case Effect.Pill:
-                    PostProcessAnimationPlayer.instance.PlayPill();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
