@@ -36,7 +36,7 @@ namespace Leon
         }
         
         public void PlayChroma() {
-            _anim.SetTrigger(chroma);
+            _anim.SetTrigger("Chroma");
         }
         
         public void PlayChromaIdle() {
@@ -49,6 +49,10 @@ namespace Leon
         
         public void PlayPill() {
             _anim.SetTrigger(pill);
+        }
+        
+        public void PlayChampi() {
+            _anim.SetTrigger("Champi");
         }
     }
 }

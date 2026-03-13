@@ -12,12 +12,14 @@ namespace Leon
             Chroma,
             ChromaIdle,
             Kaleidoscope,
-            Pill
+            Pill,
+            Champi
         }
 
         [SerializeField] private Effect effect;
 
         public void Play() {
+            Debug.Log(effect);
             switch (effect) {
                 case Effect.LensMilk:
                     PostProcessAnimationPlayer.instance.PlayLensMilk();
@@ -36,6 +38,9 @@ namespace Leon
                     break;
                 case Effect.Pill:
                     PostProcessAnimationPlayer.instance.PlayPill();
+                    break;
+                case Effect.Champi:
+                    PostProcessAnimationPlayer.instance.PlayChampi();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

@@ -52,7 +52,8 @@ namespace Leon
         public void TriggerDestroy()
         {
             onDestroyed?.Invoke();
-            Destroy(gameObject, .1f);
+            GetComponent<SpriteRenderer>().enabled = false;
+            Destroy(gameObject, 1f);
         }
     }
 }

@@ -119,12 +119,14 @@ namespace Leon
             _tongue.EnableTopColliderTongue();
         }
 
+        [SerializeField] private UnityEvent OnHit;
+
         public void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.tag != collideWithTag) { return; }
             
-            
             GameManager.Instance.ResetCombo();
+            OnHit?.Invoke();
         }
 
         IEnumerator StretchTongue()

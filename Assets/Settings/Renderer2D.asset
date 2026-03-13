@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8421359459308736671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00045f12942b46c698459096c89274e, type: 3}
+  m_Name: FullScreenPassRendererFeatureOldGUID
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::FullScreenPassRendererFeature_OldGUID
+  m_Active: 1
+  injectionPoint: 600
+  fetchColorBuffer: 1
+  requirements: 0
+  passMaterial: {fileID: 2100000, guid: 7d8dacb7bd3ea604ab7b2675d0427912, type: 2}
+  passIndex: 0
+  bindDepthStencilAttachment: 0
+  m_Version: 1
 --- !u!114 &-5670502560155095029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +89,9 @@ MonoBehaviour:
   - {fileID: 6046085091103717570}
   - {fileID: -3935939769485732408}
   - {fileID: -5670502560155095029}
-  m_RendererFeatureMap: 32b531647f5ca70dc2b805595b02e853c8557816a2bb60c90b300314f7534eb1
+  - {fileID: 6327712305884511056}
+  - {fileID: -8421359459308736671}
+  m_RendererFeatureMap: 32b531647f5ca70dc2b805595b02e853c8557816a2bb60c90b300314f7534eb1503b1d09d18cd05761ef06a63052218b
   m_UseNativeRenderPass: 0
   m_LayerMask:
     serializedVersion: 2
@@ -137,6 +159,26 @@ MonoBehaviour:
   fetchColorBuffer: 1
   requirements: 0
   passMaterial: {fileID: 2100000, guid: 684ae2958cbc37c4fb0209aaa5096c10, type: 2}
+  passIndex: 0
+  bindDepthStencilAttachment: 0
+  m_Version: 1
+--- !u!114 &6327712305884511056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00045f12942b46c698459096c89274e, type: 3}
+  m_Name: FullScreenPassRendererFeatureOldGUID
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::FullScreenPassRendererFeature_OldGUID
+  m_Active: 1
+  injectionPoint: 600
+  fetchColorBuffer: 1
+  requirements: 0
+  passMaterial: {fileID: 2100000, guid: 748462c5a5c8a274fb26192bbb64e730, type: 2}
   passIndex: 0
   bindDepthStencilAttachment: 0
   m_Version: 1

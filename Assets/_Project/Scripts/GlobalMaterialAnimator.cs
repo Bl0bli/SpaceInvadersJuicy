@@ -37,6 +37,36 @@ namespace Leon
         [SerializeField] private float _Lens_MultipleOrSingle = 0;
         [SerializeField] private float _Boiling = 0;
 
+        [Header("ChampiEffects"), SerializeField]
+        private Material _champignonMaterial;
+        [SerializeField] private float _champiHDR = 1;
+        [SerializeField] private float _champiStrength = 0;
+        [SerializeField] private Vector2 _champiRScale = new Vector2(1,1);
+        [SerializeField] private Vector2 _champiROffset = new Vector2(0.02f, - 0.02f);
+        [SerializeField] private Vector2 _champiGScale = new Vector2(1,1);
+        [SerializeField] private Vector2 _champiGOffset;
+        [SerializeField] private Vector2 _champiBScale = new Vector2(1,1);
+        [SerializeField] private Vector2 _champiBOffset = new Vector2(-0.02f, 0.02f);
+        [SerializeField] private Vector2 _champiLensPos;
+        [SerializeField] private float _champiLensStrength = 0;
+        [SerializeField] private float _champiLensMin = -0.2f;
+        [SerializeField] private float _champiLensMax = 0.5f;
+        
+        [Header("MilkEffects"), SerializeField]
+        private Material _milkMaterial;
+        [SerializeField] private float _milkHDR = 1;
+        [SerializeField] private float _milkStrength = 0;
+        [SerializeField] private Vector2 _milkRScale = new Vector2(1,1);
+        [SerializeField] private Vector2 _milkROffset = new Vector2(0.02f, - 0.02f);
+        [SerializeField] private Vector2 _milkGScale = new Vector2(1,1);
+        [SerializeField] private Vector2 _milkGOffset;
+        [SerializeField] private Vector2 _milkBScale = new Vector2(1,1);
+        [SerializeField] private Vector2 _milkBOffset = new Vector2(-0.02f, 0.02f);
+        [SerializeField] private Vector2 _milkLensPos;
+        [SerializeField] private float _milkLensStrength = 0;
+        [SerializeField] private float _milkLensMin = -0.2f;
+        [SerializeField] private float _milkLensMax = 0.5f;
+        
         [Header("Sinusoidale"), SerializeField]
         private Material _sinusoidalematerial;
 
@@ -77,6 +107,35 @@ namespace Leon
             _chromaticAberrationMaterial.SetFloat("_Lens_MultipleOrSingle", _Lens_MultipleOrSingle);
             _chromaticAberrationMaterial.SetFloat("_Boiling", _Boiling);
             
+            //Champignon
+            _champignonMaterial.SetFloat("_HDR", _champiHDR);
+            _champignonMaterial.SetFloat("_ChromAb_Strenght", _champiStrength);
+            _champignonMaterial.SetVector("_R_Scale", _champiRScale);
+            _champignonMaterial.SetVector("_R_Offset", _champiROffset);
+            _champignonMaterial.SetVector("_G_Scale", _champiGScale);
+            _champignonMaterial.SetVector("_G_Offset", _champiGOffset);
+            _champignonMaterial.SetVector("_B_Scale", _champiBScale);
+            _champignonMaterial.SetVector("_B_Offset", _champiBOffset);
+            _champignonMaterial.SetVector("_Lens_Pos", _champiLensPos);
+            _champignonMaterial.SetFloat("_Lens_Strengh", _champiLensStrength);
+            _champignonMaterial.SetFloat("_Lens_Min", _champiLensMin);
+            _champignonMaterial.SetFloat("_Lens_Max", _champiLensMax);
+            
+            //Milk
+            _milkMaterial.SetFloat("_HDR", _milkHDR);
+            _milkMaterial.SetFloat("_ChromAb_Strenght", _milkStrength);
+            _milkMaterial.SetVector("_R_Scale", _milkRScale);
+            _milkMaterial.SetVector("_R_Offset", _milkROffset);
+            _milkMaterial.SetVector("_G_Scale", _milkGScale);
+            _milkMaterial.SetVector("_G_Offset", _milkGOffset);
+            _milkMaterial.SetVector("_B_Scale", _milkBScale);
+            _milkMaterial.SetVector("_B_Offset", _milkBOffset);
+            _milkMaterial.SetVector("_Lens_Pos", _milkLensPos);
+            _milkMaterial.SetFloat("_Lens_Strengh", _milkLensStrength);
+            _milkMaterial.SetFloat("_Lens_Min", _milkLensMin);
+            _milkMaterial.SetFloat("_Lens_Max", _milkLensMax);
+            
+            //Sinusoidale
             _sinusoidalematerial.SetFloat("_Power", _power);
             _sinusoidalematerial.SetFloat("_Density", _density);
 
@@ -89,6 +148,10 @@ namespace Leon
                 currentPhase += 1;
                 PlayPhase(currentPhase);
             }
+        }
+
+        private void Start() {
+            _Leon.SetFloat("_Multicolor",0f);
         }
 
         private void PlayPhase(int i) {
