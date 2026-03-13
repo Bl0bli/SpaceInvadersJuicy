@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
@@ -17,6 +18,7 @@ namespace Leon
         public static CameraShake Instance;
 
         private int _playCount = 0;
+        private bool _disabled = false;
 
         private void Awake()
         {
@@ -24,8 +26,24 @@ namespace Leon
             Instance = this;
         }
 
+        private void Start()
+        {
+            FXManager.Instance.OnDisableAllToggled += OnDisableAll;
+        }
+
+        private void OnDisableAll(bool val)
+        {
+            _disabled = val;
+            if (!_disabled)
+            {
+                StopAllCoroutines();
+                _playCount = 0;
+            }
+        }
+
         public void Shake(float duration = 0.2f, float strength = 0.5f)
         {
+            if (_disabled) return;
             transform.DOComplete(); 
             
             transform.DOShakePosition(duration, strength, 10, 90, false, true);
@@ -33,16 +51,22 @@ namespace Leon
 
         public void Shake()
         {
+            if (_disabled) return;
             transform.DOComplete(); 
             transform.DOShakePosition(_duration, _strenght, _vibratio, _randomness, _snapping, _fadeOut);
         }
 
         public void ShakeAll()
         {
+            if (_disabled) return;
             StartCoroutine(ShakeAllRoutine());
         }
 
-        public void Register() => _playCount++;
+        public void Register()
+        {
+            if (_disabled) return;
+            _playCount++;
+        }
 
         IEnumerator ShakeAllRoutine()
         {
